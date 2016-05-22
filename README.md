@@ -3,7 +3,7 @@ Simple tools used to log PlayStation 2 controller state during gameplay on physi
 ## Wiring
 Tested on Arduino Uno with original PlayStation 2 controller.
 
-![http://store.curiousinventor.com/media/images/guides/ps2/wiring.jpg]
+![](http://store.curiousinventor.com/media/images/guides/ps2/wiring.jpg)
 
 * Yellow / Attention to pin 10 
 * Brown / Data to pin 11 
@@ -38,10 +38,9 @@ Collects ~60 samples per second of the form:
 
 
 ## Button States
-Bit map of button states. 1 == no depressed, 0 == depressed.
+Bit map of button states. 1 == not pressed, 0 == pressed.
 
-**Button states 1**
-From lsb to msb
+**Button states 1** (from lsb to msb)
 
 * Select
 * L3
@@ -52,8 +51,7 @@ From lsb to msb
 * Down
 * Left
 
-**Button states 2**
-From lsb to msb 
+**Button states 2** (from lsb to msb)
 
 * L2
 * R2
