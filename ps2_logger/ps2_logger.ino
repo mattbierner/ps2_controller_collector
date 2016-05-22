@@ -53,6 +53,15 @@ ISR (SPI_STC_vect) {
 
 void loop (void) {
   if (process && pos >= 8) {
+    
+#if DEBUG
+    for (unsigned i = 0; i < pos; ++i) {
+      //printHex(buf[i]);
+      printBits(buf[i]);
+      Serial.print(':');
+    }
+    Serial.print("\n");
+#else
     // probs could be done on computer instead of here but whatev
     if (buf[1] == 0x73) {
       Serial.print(buf[3], DEC);
@@ -68,14 +77,6 @@ void loop (void) {
       Serial.print(buf[8], DEC);
       Serial.print("\n");
     }
-
-#if DEBUG
-    for (unsigned i = 0; i < pos; ++i) {
-      //printHex(buf[i]);
-      printBits(buf[i]);
-      Serial.print(':');
-    }
-    Serial.print("\n");
 #endif
     
     pos = 0;
