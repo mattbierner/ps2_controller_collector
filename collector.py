@@ -6,7 +6,7 @@ import datetime
 import argparse
 
 # Config 
-PORT = '/dev/cu.usbmodem621'
+PORT = '/dev/cu.usbmodem411'
 RATE = 115200
 
 
