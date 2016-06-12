@@ -1,9 +1,8 @@
 # Write arduino from ps2_logger events to file
+import argparse
+import datetime
 import serial
 import sys
-import time
-import datetime
-import argparse
 
 # Config 
 PORT = '/dev/cu.usbmodem411'
@@ -26,7 +25,7 @@ def main(output_file, log=False):
             loop(ser, out, log=log)
 
 
-parser = argparse.ArgumentParser(description='Process some integers.')
+parser = argparse.ArgumentParser(description='Write arduino from ps2_logger events to file.')
 parser.add_argument('output', help='output file')
 parser.add_argument('--log', default=False, action='store_true', help='Enable printing to console?')
 
